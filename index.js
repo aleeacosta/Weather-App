@@ -15,7 +15,9 @@ const getInfo = async () => {
     document.getElementById("city").innerHTML = res.data.location.name + ", " + res.data.location.country   
     document.getElementById("temp").innerHTML = res.data.current.feelslike_c + "º"
     document.getElementById("condition").innerHTML = res.data.current.condition.text
-    document.getElementById("icon").setAttribute("src", res.data.current.condition.icon)
+    document.getElementById("icon").setAttribute("src", res.data.current.condition.icon)      
+    document.getElementById("time").innerHTML = "Hora Local: " + res.data.location.localtime.substring(11,16)
+    document.getElementById("favicon").setAttribute("href", res.data.current.condition.icon)
     
 }
 

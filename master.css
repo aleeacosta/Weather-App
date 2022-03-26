@@ -6,10 +6,11 @@ html {
 
 body {
     background-color: blanchedalmond;
-    display: flex;
+    display: flex;    
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
 .container {
@@ -23,7 +24,8 @@ body {
 h1 {
     text-align: center;
     margin-top: 10px;
-    font-weight: 700;
+    font-weight: 700;  
+    color: #212121;  
 }
 
 #cityName {
@@ -32,11 +34,11 @@ h1 {
     padding: 5px 10px 5px 10px;
     width: 280px;
     border: 0px;
-    border-radius: 5px;
-    
+    border-radius: 5px;    
 }
 
 .info {
+    color: #212121;
     background-color: white;
     padding: 20px;
     margin-top: 20px;
@@ -45,12 +47,34 @@ h1 {
     display: none;
 }
 
+.info > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#icon {
+    display: inline-block;
+}
+
 #temp {
+    display: inline-block;
     font-size: 48px;
     font-weight: 700;
-    margin: 5px;
+    margin: 0 5px;
 }
 
 #condition {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#city {
+    margin: 5px;
+}
+
+#time {
     margin: 0;
+    font-size: 13px;
 }
