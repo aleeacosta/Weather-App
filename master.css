@@ -5,7 +5,10 @@ html {
 }
 
 body {    
-    background-color: blanchedalmond;
+    background-image: url(/images/27082020-DJI_0196.jpg);
+    background-position: center;
+
+
     display: flex;    
     justify-content: center;
     align-items: center;
@@ -14,12 +17,15 @@ body {
 }
 
 .container {    
-    background-color:#df9075;
-    width: 300px;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);  
-        
+    width: 300px;    
+    padding: 20px;    
+    
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8.9px);
+    -webkit-backdrop-filter: blur(8.9px);   
+            
 }
 
 h1 {
@@ -33,19 +39,30 @@ h1 {
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
     padding: 5px 10px 5px 10px;
-    width: 280px;
-    border: 0px;
-    border-radius: 5px;    
+    width: 280px;    
+    
+    color: whitesmoke;
+    background: rgba(37, 37, 37, 0.26);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.2px);
+    -webkit-backdrop-filter: blur(8.2px);
+    border: 1px solid rgba(37, 37, 37, 0.21);
 }
 
 .info {
-    color: #212121;
-    background-color: white;
+    color: whitesmoke;    
     padding: 20px;
-    margin-top: 20px;
-    border-radius: 5px;
+    margin-top: 20px;    
     text-align: center;
     display: none;
+    
+    background: rgba(37, 37, 37, 0.26);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.2px);
+    -webkit-backdrop-filter: blur(8.2px);
+    border: 1px solid rgba(37, 37, 37, 0.21);
 }
 
 .info > div {
@@ -91,15 +108,22 @@ h1 {
 }
 
 .container2 > div {
-    background-color: #ffffff;
+    color: whitesmoke;    
     height: 130px;
-    margin-top: 20px;
-    border-radius: 5px;
+    margin-top: 20px;    
     text-align: center;
+    
+    background: rgba(37, 37, 37, 0.26);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.2px);
+    -webkit-backdrop-filter: blur(8.2px);
+    border: 1px solid rgba(37, 37, 37, 0.21);
 }
 
 .container2 > div > div {
     height: 50px;
+    
 }
 
 .container2 > div > div > img {
@@ -118,14 +142,27 @@ h1 {
 }
   
 .item-1 { 
-      grid-area: item-1; 
+    grid-area: item-1; 
 }
   
 .item-2 { 
     grid-area: item-2; 
 }
-  
-.item-3 { 
-    grid-area: item-3; 
+
+.footer {
+    position: fixed;
+    bottom: 20px;
 }
+
+.footer img{
+    width: 30px;    
+}
+
+.footer img:hover{
+    
+    -webkit-filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+    filter: drop-shadow(0px 0px 10px rgb(255, 255, 255, 0.8));
+}
+  
+
   
