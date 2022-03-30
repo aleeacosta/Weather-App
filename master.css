@@ -7,8 +7,6 @@ html {
 body {    
     background-image: url(/images/27082020-DJI_0196.jpg);
     background-position: center;
-
-
     display: flex;    
     justify-content: center;
     align-items: center;
@@ -19,7 +17,6 @@ body {
 .container {    
     width: 300px;    
     padding: 20px;    
-    
     background: rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
@@ -40,7 +37,6 @@ h1 {
     font-family: 'Poppins', sans-serif;
     padding: 5px 10px 5px 10px;
     width: 280px;    
-    
     color: whitesmoke;
     background: rgba(37, 37, 37, 0.26);
     border-radius: 10px;
@@ -55,7 +51,6 @@ h1 {
     padding: 20px;
     margin-top: 20px;    
     text-align: center;
-    display: none;
     
     background: rgba(37, 37, 37, 0.26);
     border-radius: 10px;
@@ -98,7 +93,7 @@ h1 {
 }
 
 .container2 {  
-    display: none;
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 20px;
@@ -111,8 +106,7 @@ h1 {
     color: whitesmoke;    
     height: 130px;
     margin-top: 20px;    
-    text-align: center;
-    
+    text-align: center;    
     background: rgba(37, 37, 37, 0.26);
     border-radius: 10px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -150,19 +144,24 @@ h1 {
 }
 
 .footer {
-    position: fixed;
+    position: absolute;    
     bottom: 20px;
 }
 
-.footer img{
-    width: 30px;    
+#logo {    
+    width: 30px; 
+    height: 30px;
+    -webkit-filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
+     filter: drop-shadow(6px 6px 8px rgb(0, 0, 0));    
 }
 
-.footer img:hover{
-    
-    -webkit-filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
-    filter: drop-shadow(0px 0px 10px rgb(255, 255, 255, 0.8));
+#logo:hover {
+    transition: 0.2s;
+    width: 35px;
+    height: 35px;     
 }
-  
+
+
+
 
   

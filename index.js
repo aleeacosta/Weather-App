@@ -1,19 +1,13 @@
 
 const input = document.getElementById("cityName");
 const weekday = ["Dom","Lun","Mar","Mie","Jue","Vie","Sab"];
-let city = ""
-
-input.addEventListener("change", updateValue)
-function updateValue(e) {
-    city = e.srcElement.value;
-    getInfo();
-  }
+let city = "Barcelona";
 
 const getInfo = async () => {
     res = await axios(`http://api.weatherapi.com/v1/current.json?key=d953e901689840feb78135231222603 &q=${city} &lang=es`)
     res2 = await axios(`http://api.weatherapi.com/v1/forecast.json?key=d953e901689840feb78135231222603&q=${city}&days=3 &lang=es`)   
-    document.getElementById("info").setAttribute("style", "display:block;")
-    document.getElementById("container2").setAttribute("style", "display:grid;")  
+    // document.getElementById("info").setAttribute("style", "display:block;")
+    // document.getElementById("container2").setAttribute("style", "display:grid;")  
 
     document.getElementById("city").innerHTML = res.data.location.name + ", " + res.data.location.country   
     document.getElementById("temp").innerHTML = res.data.current.feelslike_c + "º"
@@ -33,6 +27,15 @@ const getInfo = async () => {
     document.getElementById("day2").innerHTML = weekday[fecha2.getDay()] + " " + fecha2.getDate() 
     
 }
+
+getInfo();
+
+input.addEventListener("change", updateValue)
+function updateValue(e) {
+    city = e.srcElement.value;
+    getInfo();
+}
+
 
 
     
