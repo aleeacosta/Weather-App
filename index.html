@@ -14,16 +14,56 @@
 <body>
     <div class="container">
         <h1>Weather App</h1>
-        <input id="cityName" type="text" placeholder="Pick a City">
+        <input id="cityName" type="text" placeholder="Pick a City" pattern="[a-z]*">
         <p id="mError">CITY NOT FOUND</p>
+
         <div id="info" class="info">
-            <div>
-                <img id="icon" src="" alt="">  
-                <p id="temp"></p>
-            </div>            
-            <p id="condition"></p>           
+            
+            <img id="icon" src="" alt="">  
+            <p id="condition"></p>
+            <p id="time"></p> 
+            <p id="temp"></p>                      
             <p id="city"></p>
-            <p id="time"></p>  
+
+            <div class="infoExtra">
+                <div class="extra-1">
+                    <div class="logoExtra">
+                        <img src="/images/wind.png" alt="">
+                    </div>
+                    <div class="textoExtra">
+                        <p>WIND</p>
+                        <p id="wind" class="pExtra">25</p>
+                    </div>
+                </div>
+                <div class="extra-2">
+                    <div class="logoExtra">
+                        <img src="/images/drop.png" alt="">
+                    </div>
+                    <div class="textoExtra">
+                        <p>HUMIDITY</p>
+                        <p id="humidity" class="pExtra">25</p>
+                    </div>
+                </div>
+                <div class="extra-3">
+                    <div class="logoExtra">
+                        <img src="/images/sun.png" alt="">
+                    </div>
+                    <div class="textoExtra">
+                        <p>UV INDEX</p>
+                        <p id="uv" class="pExtra">25</p>
+                    </div>
+                </div>
+                <div class="extra-4">
+                    <div class="logoExtra">
+                        <img src="/images/pressure.png" alt="">
+                    </div>
+                    <div class="textoExtra">
+                        <p>PRESSURE</p>
+                        <p id="pressure" class="pExtra">25</p>
+                    </div>
+                </div>
+            </div>
+             
         </div>    
         
         <div class="container2" id="container2">

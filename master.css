@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
 
 html {
     font-family: 'Poppins', sans-serif;
@@ -8,8 +8,9 @@ body {
     background-image: url(/images/27082020-DJI_0196.jpg);
     background-position: center;
     display: flex;    
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
     margin: 0;
 }
@@ -50,6 +51,15 @@ h1 {
     outline: 1px solid #ffffff;
 }
 
+.error:invalid {
+    animation: shake 300ms;
+}
+@keyframes shake {
+    25% { transform: translateX(4px);}
+    50% { transform: translateX(-4px);}
+    75% { transform: translateX(4px);}
+}
+
 #mError {
     display: none;
     color: #FF8585;
@@ -62,7 +72,7 @@ h1 {
 
 .info {
     color: whitesmoke;    
-    padding: 20px;
+    padding-top: 20px;
     margin-top: 20px;    
     text-align: center;    
     background: rgba(37, 37, 37, 0.26);
@@ -73,21 +83,11 @@ h1 {
     border: 1px solid rgba(37, 37, 37, 0.21);    
 }
 
-.info > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#icon {
-    display: inline-block;
-}
-
-#temp {
-    display: inline-block;
-    font-size: 48px;
+#temp {    
+    font-size: 56px;
     font-weight: 700;
     margin: 0 5px;
+    line-height: 80px;
 }
 
 #condition {
@@ -97,12 +97,82 @@ h1 {
 }
 
 #city {
-    margin: 5px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 200;
 }
 
 #time {
     margin: 0;
     font-size: 13px;
+}
+
+.infoExtra {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 0; 
+    grid-template-areas: 
+    "extra-1 extra-2"
+    "extra-3 extra-4";  
+    margin-top: 10px;   
+}
+
+.infoExtra > div{
+    font-size: 12px;
+    font-weight: 200;  
+}
+
+.logoExtra {    
+    display: inline;     
+}
+
+.logoExtra img {
+    width: 20px; 
+    height: 20px; 
+    margin: 6px;
+    filter: invert();
+}
+
+.textoExtra {
+    display: inline-block;
+    width: 60%;
+    text-align: left;
+}
+
+.textoExtra p {
+    margin: 10px 0 4px 12px;
+    letter-spacing: 1px;
+}
+
+.pExtra {
+    font-weight: 700;
+    letter-spacing: 0px !important;
+    margin: 5px 0 10px 12px !important;
+}
+
+
+.extra-1 { 
+    grid-area: extra-1; 
+    border-top: 1px solid rgba(0, 0, 0, 0.20);
+    border-right: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+.extra-2 { 
+    grid-area: extra-2;
+    border-top: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+.extra-3 { 
+    grid-area: extra-3; 
+    border-top: 1px solid rgba(0, 0, 0, 0.20);
+    border-right: 1px solid rgba(0, 0, 0, 0.20); 
+}
+
+.extra-4 { 
+    grid-area: extra-4; 
+    border-top: 1px solid rgba(0, 0, 0, 0.20);
+    
 }
 
 .container2 {  
@@ -157,15 +227,17 @@ h1 {
 }
 
 .footer {
-    position: absolute;    
-    bottom: 20px;
+    display: flex;    
+    bottom: 10px;
 }
 
 #logo {    
     width: 30px; 
     height: 30px;
     -webkit-filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
-     filter: drop-shadow(6px 6px 8px rgb(0, 0, 0));    
+    filter: drop-shadow(6px 6px 8px rgb(0, 0, 0));   
+    position: absolute; 
+    bottom: 20px;
 }
 
 #logo:hover {
