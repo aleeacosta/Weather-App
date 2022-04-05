@@ -16,16 +16,13 @@ const getInfo = async () => {
         document.getElementById("temp").innerHTML = current.data.current.feelslike_c + "º"
         document.getElementById("condition").innerHTML = current.data.current.condition.text
         document.getElementById("icon").setAttribute("src", current.data.current.condition.icon) 
-        let fechaActual = new Date(current.data.location.localtime)
-        document.getElementById("time").innerHTML = weekdayFull[fechaActual.getDay()] + ", " + current.data.location.localtime.substring(1,3) + " " + month[fechaActual.getMonth()]
+        let fechaActual = new Date(current.data.location.localtime)        
+        document.getElementById("time").innerHTML = weekdayFull[fechaActual.getDay()] + ", " + current.data.location.localtime.substring(8,11) + month[fechaActual.getMonth()]
         document.getElementById("favicon").setAttribute("href", current.data.current.condition.icon)    
         document.getElementById("wind").innerHTML = current.data.current.wind_kph + " km/h"
         document.getElementById("pressure").innerHTML = current.data.current.pressure_mb + " mbar"
         document.getElementById("uv").innerHTML = current.data.current.uv
         document.getElementById("humidity").innerHTML = current.data.current.humidity
-
-
-
 
         document.getElementById("temp1").innerHTML = forecast.data.forecast.forecastday[1].day.avgtemp_c + "º"
         document.getElementById("icon1").setAttribute("src", forecast.data.forecast.forecastday[1].day.condition.icon)  
